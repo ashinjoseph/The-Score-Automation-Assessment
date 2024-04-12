@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression:The Score" parallel="false" thread-count="4" configfailurepolicy="continue" preserve-order="true" verbose="1">
+
+    <test name="the-score-assessment-test">
+        <parameter name="execution-env" value="device"/>
+        <!--<parameter name="execution-env" value="sauce-lab"/>-->
+        <classes>
+            <class name="org.the.score.test.VerifyLeagueStats"/>
+
+        </classes>
+    </test>
+    </suite>

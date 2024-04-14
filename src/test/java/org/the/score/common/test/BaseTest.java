@@ -8,6 +8,7 @@ import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestContext;
 import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
 import org.the.score.common.utils.FilesUtility;
 import java.io.File;
 import java.net.MalformedURLException;
@@ -21,8 +22,9 @@ public class BaseTest {
 
     protected static final Logger logger = LogManager.getLogger(BaseTest.class);
     protected String Execution_Environment;
-
     protected AndroidDriver driver;
+    protected SoftAssert sAssert;
+
 
     public BaseTest(AndroidDriver driver) {
         this.driver = driver;

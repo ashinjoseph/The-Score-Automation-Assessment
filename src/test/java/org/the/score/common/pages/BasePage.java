@@ -44,8 +44,7 @@ public class BasePage {
 
         return actualText.contains(expectedText);
     }
-    public boolean navigateBack(WebElement isElementDisplayed) {
+    public void navigateBack() {
         driver.navigate().back();
-        return isElementDisplayed.isDisplayed();
     }
 }

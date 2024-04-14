@@ -6,14 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.time.Duration;
-import java.util.Properties;
-
 public abstract class CommonUtility {
-
 
     public static void sleep(int durationInSec){
         try {

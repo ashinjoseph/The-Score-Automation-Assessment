@@ -19,17 +19,19 @@ public class TeamPage extends BasePage {
     private final String lbl_TeamStatsTab_Xpath = "//android.widget.TextView[@text='TEAM STATS']";
     private final String lbl_StatsScreen_Xpath = "//*[@resource-id='com.fivemobile.thescore:id/recyclerView']/*/android.widget.TextView[contains(@text, 'STATS')]";
 
-    @Step("Step verify if Team screen is displayed")
-    public void verifyTeamScreenIsDisplayed(String teamName) {
+    @Step("Verify if Team screen is displayed")
+    public boolean isTeamScreenDisplayed(String teamName) {
         WebElement lbl_TeamName = driver.findElement(MobileBy.id(lbl_TeamName_Id));
-        isElementWithTextDisplayed(lbl_TeamName, teamName);
-        //todo log
+        return isElementWithTextDisplayed(lbl_TeamName, teamName);
     }
 
-    @Step("Step navigate to Team stats")
+    @Step("Step navigates to Team stats")
     public void navigateToTeamStatsTab() {
         clickAndTransition(MobileBy.xpath(lbl_TeamStatsTab_Xpath));
-        driver.findElement(MobileBy.xpath(lbl_StatsScreen_Xpath)).isDisplayed();
     }
 
+    @Step("Verify if Team Stats tab is open")
+    public boolean isTeamStatsTabOpen() {
+        return driver.findElement(MobileBy.xpath(lbl_StatsScreen_Xpath)).isDisplayed();
+    }
 }

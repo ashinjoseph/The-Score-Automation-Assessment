@@ -34,6 +34,5 @@ public class GetStartedPage extends BasePage {
         clickAndTransition(MobileBy.id(btn_Done_Id));
         clickAndTransition(MobileBy.id(btn_MayBeLater_Id));
         clickAndTransition(MobileBy.id(btn_CloseBanner_Id));
-
     }
 }

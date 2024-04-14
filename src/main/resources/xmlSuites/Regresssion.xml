@@ -5,7 +5,7 @@
         <parameter name="execution-env" value="device"/>
         <!--<parameter name="execution-env" value="sauce-lab"/>-->
         <classes>
-            <class name="org.the.score.test.VerifyLeagueStats"/>
+            <class name="org.the.score.test.VerifyTeamStats"/>
 
         </classes>
     </test>

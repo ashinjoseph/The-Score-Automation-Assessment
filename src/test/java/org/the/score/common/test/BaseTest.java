@@ -55,7 +55,7 @@ public class BaseTest {
                 sauceOptions.setCapability("username", "oauth-ashinjoseph.joseph-e773a");
                 sauceOptions.setCapability("accessKey", "23075c50-48d5-4839-a235-90d7a8b77e3b");
                 sauceOptions.setCapability("build", "appium-build-GW13D");
-                sauceOptions.setCapability("name", "<your test name>");
+                sauceOptions.setCapability("name", "VerifyTeamStats");
                 sauceOptions.setCapability("deviceOrientation", "PORTRAIT");
                 caps.setCapability("sauce:options", sauceOptions);
                 break;
@@ -70,6 +70,7 @@ public class BaseTest {
                 break;
         }
         driver = new AndroidDriver<>(url, caps);
+        this.sAssert = new CustomSoftAssert(driver);
     }
 
     @AfterSuite(alwaysRun = true)
@@ -77,5 +78,13 @@ public class BaseTest {
         if (driver != null) {
             driver.quit();
         }
+    }
+}
+class CustomSoftAssert extends SoftAssert {
+
+    private final AndroidDriver activeDriver;
+
+    public CustomSoftAssert(AndroidDriver activeDriver) {
+        this.activeDriver = activeDriver;
     }
 }

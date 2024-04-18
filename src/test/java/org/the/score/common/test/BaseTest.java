@@ -2,8 +2,6 @@ package org.the.score.common.test;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestContext;
@@ -19,12 +17,9 @@ public class BaseTest {
         super();
     }
 
-
-    protected static final Logger logger = LogManager.getLogger(BaseTest.class);
     protected String Execution_Environment;
     protected AndroidDriver driver;
     protected SoftAssert sAssert;
-
 
     public BaseTest(AndroidDriver driver) {
         this.driver = driver;

@@ -28,7 +28,6 @@ public class BasePage {
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*")));
         } catch (NoSuchElementException e) {
-            // Todo:logger
             System.out.println("No element found on the new page.");
         }
     }

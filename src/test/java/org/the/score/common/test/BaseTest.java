@@ -47,9 +47,7 @@ public class BaseTest {
                 caps.setCapability("appium:platformVersion", "12.0");
                 caps.setCapability("appium:automationName", "UiAutomator2");
                 MutableCapabilities sauceOptions = new MutableCapabilities();
-                sauceOptions.setCapability("username", "oauth-ashinjoseph.joseph-e773a");
-                sauceOptions.setCapability("accessKey", "23075c50-48d5-4839-a235-90d7a8b77e3b");
-                sauceOptions.setCapability("build", "appium-build-GW13D");
+       
                 sauceOptions.setCapability("name", "VerifyTeamStats");
                 sauceOptions.setCapability("deviceOrientation", "PORTRAIT");
                 caps.setCapability("sauce:options", sauceOptions);
